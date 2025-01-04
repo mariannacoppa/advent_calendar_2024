@@ -10,17 +10,25 @@ export default {
   },
   data() {
     return {
-      days: daysItems,
+      days: daysItems.map((day, index) => ({
+        ...day,
+        covered:
+          JSON.parse(localStorage.getItem(`day-${index}-covered`)) || false,
+      })),
       showModal: false,
-      modalContent: {},
+      currentDayIndex: null,
     };
   },
   methods: {
-    openModal(item) {
-      this.modalContent = item;
+    openModal(index) {
+      this.currentDayIndex = index;
       this.showModal = true;
     },
     closeModal() {
+      if (this.currentDayIndex !== null) {
+        this.days[this.currentDayIndex].covered = true;
+        localStorage.setItem(`day-${this.currentDayIndex}-covered`, true);
+      }
       this.showModal = false;
     },
   },
@@ -37,11 +45,16 @@ export default {
           :key="index"
           :icon="dayItem.icon"
           :number="dayItem.number"
-          @click.native="openModal(dayItem)"
+          :covered="dayItem.covered"
+          @click.native="openModal(index)"
         />
       </div>
     </main>
-    <Modal v-if="showModal" :content="modalContent" @close="closeModal" />
+    <Modal
+      v-if="showModal"
+      :content="days[currentDayIndex]"
+      @close="closeModal"
+    />
   </div>
 </template>
 

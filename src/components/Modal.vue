@@ -1,7 +1,7 @@
 <template>
   <div class="modal-overlay" @click="$emit('close')">
     <div class="modal-content" @click.stop>
-      <button class="close-btn" @click="$emit('close')">X</button>
+      <button class="close-btn text-white" @click="$emit('close')">X</button>
       <div v-if="content.type === 'image'">
         <img :src="content.url" alt="Modal content" />
       </div>
@@ -30,7 +30,7 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.6);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,13 +38,15 @@ export default {
 }
 
 .modal-content {
-  background: white;
   padding: 20px;
   border-radius: 8px;
   position: relative;
   max-width: 90%;
   max-height: 90%;
   overflow: auto;
+  p {
+    color: white;
+  }
 }
 
 .close-btn {
