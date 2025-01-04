@@ -1,26 +1,27 @@
 <script>
 import daysItems from "../../daysItems.json";
 import DayItem from "./DayItem.vue";
+import Modal from "./Modal.vue";
 
 export default {
   components: {
     DayItem,
+    Modal,
   },
   data() {
     return {
-      days: daysItems.map((day, index) => ({
-        ...day,
-        // add "covered" cell state
-        covered:
-          JSON.parse(localStorage.getItem(`day-${index}-covered`)) || false,
-      })),
+      days: daysItems,
+      showModal: false,
+      modalContent: {},
     };
   },
   methods: {
-    // when clicked, each cell change will be memorized in localStorage in order to be visible even after page refreshing
-    toggleCover(index) {
-      this.days[index].covered = !this.days[index].covered;
-      localStorage.setItem(`day-${index}-covered`, this.days[index].covered);
+    openModal(item) {
+      this.modalContent = item;
+      this.showModal = true;
+    },
+    closeModal() {
+      this.showModal = false;
     },
   },
 };
@@ -30,18 +31,17 @@ export default {
   <div class="bg-darkblue">
     <main class="container">
       <div class="row">
-        <!-- .native changer on dayItem click event spreads the event to the father component -->
         <DayItem
           class="col-3 col-md-2 d-flex justify-content-center"
           v-for="(dayItem, index) in days"
           :key="index"
           :icon="dayItem.icon"
           :number="dayItem.number"
-          :covered="dayItem.covered"
-          @click.native="toggleCover(index)"
+          @click.native="openModal(dayItem)"
         />
       </div>
     </main>
+    <Modal v-if="showModal" :content="modalContent" @close="closeModal" />
   </div>
 </template>
 
