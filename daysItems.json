@@ -1,0 +1,102 @@
+[
+  {
+    "icon": "./src/assets/icons/ico-neve.png",
+    "number": "1"
+  },
+  {
+    "icon": "./src/assets/icons/ico-albero.png",
+    "number": "2"
+  },
+  {
+    "icon": "./src/assets/icons/ico-fiocco.png",
+    "number": "3"
+  },
+  {
+    "icon": "./src/assets/icons/ico-stella.png",
+    "number": "4"
+  },
+  {
+    "icon": "./src/assets/icons/ico-omino.png",
+    "number": "5"
+  },
+  {
+    "icon": "./src/assets/icons/ico-stella.png",
+    "number": "6"
+  },
+  {
+    "icon": "./src/assets/icons/ico-pupazzo.png",
+    "number": "7"
+  },
+  {
+    "icon": "./src/assets/icons/ico-caramella.png",
+    "number": "8"
+  },
+  {
+    "icon": "./src/assets/icons/ico-calza.png",
+    "number": "9"
+  },
+  {
+    "icon": "./src/assets/icons/ico-pupazzo.png",
+    "number": "10"
+  },
+  {
+    "icon": "./src/assets/icons/ico-fiocco.png",
+    "number": "11"
+  },
+  {
+    "icon": "./src/assets/icons/ico-fiocco.png",
+    "number": "12"
+  },
+  {
+    "icon": "./src/assets/icons/ico-calza.png",
+    "number": "13"
+  },
+  {
+    "icon": "./src/assets/icons/ico-stella.png",
+    "number": "14"
+  },
+  {
+    "icon": "./src/assets/icons/ico-stella.png",
+    "number": "15"
+  },
+  {
+    "icon": "./src/assets/icons/ico-calza.png",
+    "number": "16"
+  },
+  {
+    "icon": "./src/assets/icons/ico-caramella.png",
+    "number": "17"
+  },
+  {
+    "icon": "./src/assets/icons/ico-omino.png",
+    "number": "18"
+  },
+  {
+    "icon": "./src/assets/icons/ico-caramella.png",
+    "number": "19"
+  },
+  {
+    "icon": "./src/assets/icons/ico-calza.png",
+    "number": "20"
+  },
+  {
+    "icon": "./src/assets/icons/ico-caramella.png",
+    "number": "21"
+  },
+  {
+    "icon": "./src/assets/icons/ico-caramella.png",
+    "number": "22"
+  },
+  {
+    "icon": "./src/assets/icons/ico-neve.png",
+    "number": "23"
+  },
+  {
+    "icon": "./src/assets/icons/ico-neve.png",
+    "number": "24"
+  },
+  {
+    "icon": "./src/assets/icons/ico-caramella.png",
+    "number": "25"
+  }
+]
