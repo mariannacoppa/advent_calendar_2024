@@ -61,8 +61,8 @@ export default {
 <style lang="scss" scoped>
 .bg-darkblue {
   background-color: #100b45;
-  height: calc(100vh - 30vh);
-  width: 100vw;
+  height: 100vh;
+  width: 100%;
   position: absolute;
   z-index: 1;
 }
