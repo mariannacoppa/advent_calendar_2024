@@ -39,14 +39,20 @@ export default {
   <div class="bg-darkblue">
     <main class="container">
       <div class="row">
+        <!-- Dynamic binding to class property -->
         <DayItem
-          class="col-3 col-md-2 d-flex justify-content-center"
           v-for="(dayItem, index) in days"
           :key="index"
           :icon="dayItem.icon"
           :number="dayItem.number"
           :covered="dayItem.covered"
           @click.native="openModal(index)"
+          :class="{
+            'col-3 col-md-2 d-flex justify-content-center':
+              dayItem.number !== '25',
+            'col-12 d-flex justify-content-center special-day':
+              dayItem.number === '25',
+          }"
         />
       </div>
     </main>
@@ -65,11 +71,11 @@ export default {
   width: 100%;
   position: absolute;
   z-index: 1;
-}
-.container {
-  .col-3 {
-    color: white;
-    font-weight: bold;
+  .container {
+    .col-3 {
+      color: white;
+      font-weight: bold;
+    }
   }
 }
 </style>

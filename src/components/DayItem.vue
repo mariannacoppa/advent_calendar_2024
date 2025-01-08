@@ -42,6 +42,20 @@ export default {
   height: 40%;
 }
 
+/*layout dayItem 25*/
+.special-day .day-item {
+  background-color: white;
+  width: 95%;
+  .icon {
+    width: 10% !important;
+    height: 10% !important;
+  }
+  .number {
+    color: #296150;
+    font-weight: bolder;
+  }
+}
+
 .overlay {
   position: absolute;
   top: 0;
