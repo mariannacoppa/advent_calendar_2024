@@ -20,6 +20,7 @@ export default {
     };
   },
   methods: {
+    // modal behaviour functions
     openModal(index) {
       this.currentDayIndex = index;
       this.showModal = true;
@@ -30,6 +31,13 @@ export default {
         localStorage.setItem(`day-${this.currentDayIndex}-covered`, true);
       }
       this.showModal = false;
+    },
+    // removing overlays function
+    resetAllCovers() {
+      this.days.forEach((day, index) => {
+        day.covered = false;
+        localStorage.setItem(`day-${index}-covered`, false);
+      });
     },
   },
 };
@@ -54,6 +62,14 @@ export default {
               dayItem.number === '25',
           }"
         />
+      </div>
+      <!-- removing overlays button -->
+      <div class="row">
+        <div class="col-12">
+          <div class="d-flex justify-content-center">
+            <div class="btn btn-danger mt-3" @click="resetAllCovers">Reset</div>
+          </div>
+        </div>
       </div>
     </main>
     <Modal
