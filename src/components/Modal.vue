@@ -1,12 +1,17 @@
 <template>
   <div class="modal-overlay" @click="$emit('close')">
     <div class="modal-content" @click.stop>
-      <button class="close-btn text-white" @click="$emit('close')">X</button>
-      <div v-if="content.type === 'image'">
+      <button class="close-btn text-white" @click="$emit('close')">
+        Close
+      </button>
+      <div
+        class="gif rounded-3 d-flex justify-content-center"
+        v-if="content.type === 'image'"
+      >
         <img :src="content.url" alt="Modal content" />
       </div>
       <div v-else>
-        <p>{{ content.text }}</p>
+        <p class="rounded-3 p-2 me-3">{{ content.text }}</p>
       </div>
     </div>
   </div>
@@ -41,21 +46,25 @@ export default {
   padding: 20px;
   border-radius: 8px;
   position: relative;
-  max-width: 90%;
-  max-height: 90%;
+  max-width: 65%;
+  max-height: 100%;
   overflow: auto;
-  p {
+  p,
+  .gif {
     color: white;
+    background-color: #296150;
   }
 }
 
 .close-btn {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  background: none;
+  top: 0px;
+  right: 0px;
+  background: brown;
+  padding: 5px;
+  border-radius: 15px;
   border: none;
-  font-size: 20px;
+  font-size: 15px;
   cursor: pointer;
 }
 </style>
