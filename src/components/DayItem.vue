@@ -33,8 +33,16 @@ export default {
   width: 75%;
 }
 
-.day-item:hover {
+.day-item:hover,
+.special-day .day-item:hover {
   cursor: pointer;
+  width: 100%;
+  background-color: rgb(152, 116, 26);
+  transition: 0.6s;
+  .icon {
+    rotate: 360deg;
+    transition: 1s;
+  }
 }
 
 .icon {
@@ -45,7 +53,7 @@ export default {
 /*layout dayItem 25*/
 .special-day .day-item {
   background-color: white;
-  width: 95%;
+  width: 100%;
   .icon {
     width: 5% !important;
   }

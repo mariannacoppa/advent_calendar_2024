@@ -23,15 +23,25 @@ export default {};
   width: 100%;
   header {
     height: 30vh;
-    width: 83%;
+    width: 90%;
     background-color: #2b35f1;
     position: relative;
     .header-img {
       width: 100%;
       position: absolute;
-      top: 40%;
+      top: 50%;
       right: 0vw;
       z-index: 1;
+    }
+  }
+  header:hover {
+    background-color: rgb(38, 20, 120);
+    opacity: 0.5;
+    transition: 1s;
+    cursor: url(../assets/icons/ico-stella.png), auto;
+    h1 {
+      font-weight: bold;
+      transition: 0.5s;
     }
   }
 }
