@@ -47,8 +47,7 @@ export default {
   background-color: white;
   width: 95%;
   .icon {
-    width: 10% !important;
-    height: 10% !important;
+    width: 5% !important;
   }
   .number {
     color: #296150;

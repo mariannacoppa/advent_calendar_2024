@@ -67,7 +67,9 @@ export default {
       <div class="row">
         <div class="col-12">
           <div class="d-flex justify-content-center">
-            <div class="btn btn-danger mt-3" @click="resetAllCovers">Reset</div>
+            <div class="btn btn-danger my-3" @click="resetAllCovers">
+              Click Here to Reset
+            </div>
           </div>
         </div>
       </div>

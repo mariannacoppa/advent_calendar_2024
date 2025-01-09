@@ -3,7 +3,7 @@ export default {};
 </script>
 <template>
   <div class="bg-darkblue">
-    <header class="container-fluid rounded-bottom-3">
+    <header class="container rounded-bottom-3">
       <div class="row">
         <div class="col-12">
           <h1 class="text-white fs-2 text-center p-5">
@@ -23,6 +23,7 @@ export default {};
   width: 100%;
   header {
     height: 30vh;
+    width: 83%;
     background-color: #2b35f1;
     position: relative;
     .header-img {
